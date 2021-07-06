@@ -35,7 +35,7 @@ def on_activate_paste():
         assert(clipboard_text is not None)
         print(f"{datetime.now()} - Pasting: {clipboard_text}")
         keyboard.release('ctrl+shift+v')
-        keyboard.write(clipboard_text)
+        keyboard.write(clipboard_text, delay=0.05)
     except AssertionError:
         print(f"{datetime.now()} - Nothing on clipboard.")
 
